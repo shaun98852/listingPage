@@ -1,38 +1,164 @@
-.App {
+.background {
+  min-height: 100vh;
+}
+
+.heading {
+  font-family: roboto;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.inputBoxes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  width: 60%;
+  margin: auto;
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.inputBox {
+  outline: none;
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  font-family: roboto;
+  font-size: 15px;
+  width: 50%;
+  height: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.icons {
+  margin: 5px;
+  font-size: 25px;
+}
+
+.box {
+  width: 60%;
+  margin: auto;
+  /* border-style: solid; */
+  border-radius: 5px;
+  border: 1px solid #000000;
+}
+
+.hatBox {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  display: flex;
+  margin: 10px;
+}
+
+.leftSide {
+  width: 50%;
+  padding: 5px;
+}
+
+.hatImage {
+  /* height: 300px; */
+  height: 100%;
+  width: 100%;
+}
+
+.rightSide {
+  width: 50%;
+  font-family: Roboto;
+  padding-left: 5%;
+  padding-right: 5%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.limited {
+  font-family: roboto;
+  font-size: 150%;
 }
 
-.App-link {
-  color: #61dafb;
+.text {
+  font-family: roboto;
+  font-size: 30px;
+  font-size: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.newBox {
+  background-color: #ccff78;
+  border-radius: 5px;
+  font-family: Roboto;
+  width: 10%;
+  height: 5%;
+  display: Flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  position: absolute;
+}
+.inputBoxes {
+}
+
+.bottomSide {
+  font-family: Roboto;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 5%;
+}
+
+.gridBox {
+  width: 48%;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 7px;
+  background-color: #f9f9f9;
+  margin: 5px;
+  /* display: flex; */
+}
+
+.topBoxs {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.topBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.texts {
+  background-color: white;
+  padding: 5px;
+  font-size: 18px;
+}
+
+.bottomSide {
+}
+
+.newBoxs {
+  background-color: #ccff78;
+  border-radius: 5px;
+  /* display: inline; */
+  font-family: Roboto;
+  width: 10%;
+  height: 5%;
+  display: Flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  align-self: flex-end;
+  position: absolute;
+
+  /* left: 34%; */
+}
+
+.highlightText {
+  background-color: #ccff78;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 7px;
+  padding: 5px;
+}
+
+.inputBoxes {
+}
+.inputBoxes {
+}
+
+.inputBoxes {
+}
+
+.inputBoxes {
 }
