@@ -11,7 +11,7 @@ const arrangement = {
 const App = () => {
   const [detail, changeDetail] = useState([])
   const [inputValue, changeInput] = useState('')
-  const [arrangements, changeArrangement] = useState('LIST')
+  const [arrangements, changeArrangement] = useState(arrangement.list)
 
   const getDetails = async () => {
     const url = 'https://mocki.io/v1/0934df88-6bf7-41fd-9e59-4fb7b8758093'
@@ -36,19 +36,29 @@ const App = () => {
     getDetails()
   }, [])
 
+
+  const getList=(list)=>{
+    const tempList=[]
+    for (let each of list){
+        let tempWord=''
+        for(let every of each){
+            tempWord+=every.toLowerCase()
+            tempList.push(tempWord)
+        }
+    }
+
+    return tempList
+  }
+
   // LIST BOXES
   const listHatBox = () => (
     <>
       {detail.map(item => {
-        const v1Text = item.v1
-          .split('/')
-          .map(eachItem => eachItem.toLowerCase())
-        const v2Text = item.v2
-          .split('/')
-          .map(eachItem => eachItem.toLowerCase())
-        const v3Text = item.v3
-          .split('/')
-          .map(eachItem => eachItem.toLowerCase())
+
+        
+        const v1Text = getList(item.v1.split('/'))
+        const v2Text = getList(item.v2.split('/'))
+        const v3Text = getList(item.v3.split('/'))
         const colorV1 = v1Text.includes(inputValue.toLowerCase())
           ? 'highlightText'
           : 'texts'
@@ -85,15 +95,9 @@ const App = () => {
     <>
       <div className="topBoxs">
         {detail.map(items => {
-          const v1Text = items.v1
-            .split('/')
-            .map(eachItem => eachItem.toLowerCase())
-          const v2Text = items.v2
-            .split('/')
-            .map(eachItem => eachItem.toLowerCase())
-          const v3Text = items.v3
-            .split('/')
-            .map(eachItem => eachItem.toLowerCase())
+          const v1Text = getList(items.v1.split('/'))
+          const v2Text = getList(items.v2.split('/'))
+          const v3Text = getList(items.v3.split('/'))
           const colorV1 = v1Text.includes(inputValue.toLowerCase())
             ? 'highlightText'
             : 'texts'
